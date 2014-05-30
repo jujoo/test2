@@ -5,7 +5,7 @@
 </head>
 <body>
   <script>
-var game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create });
+var game = new Phaser.Game(800, 800, Phaser.AUTO, '', { preload: preload, create: create });
 
 function preload() {
 
@@ -19,7 +19,7 @@ function preload() {
 
 function create() {
 
-    var mummy = game.add.sprite(300, 200, 'mummy');
+    var mummy = game.add.sprite(300, 0, 'mummy');
 
     //  Here we add a new animation called 'walk'
     //  Because we didn't give any other parameters it's going to make an animation from all available frames in the 'mummy' sprite sheet
@@ -28,7 +28,7 @@ function create() {
     //  And this starts the animation playing by using its key ("walk")
     //  30 is the frame rate (30fps)
     //  true means it will loop when it finishes
-    mummy.animations.play('walk', 20, true);
+    mummy.animations.play('walk', 5, true);
 
 }  </script>
 </body>
